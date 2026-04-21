@@ -4,6 +4,7 @@ design:
 exports:
   formats:
     - all-pages-pdf
-    - bom-xlsx
     - bom-csv
+    - icd-pdf
+    - bom-pdf
   output-dir: rendered

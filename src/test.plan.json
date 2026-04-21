@@ -471,7 +471,26 @@
       "pageNumber": 1
     }
   },
-  "planNotes": {},
+  "planNotes": {
+    "pn_1776789525330_6okcjsp6t": {
+      "content": {
+        "items": [
+          "List 1",
+          "List item 2"
+        ],
+        "type": "numbered"
+      },
+      "id": "pn_1776789525330_6okcjsp6t",
+      "pageId": "page_1776087723131_2w7mgmg8b",
+      "position": {
+        "x": 225,
+        "y": 345
+      },
+      "title": "Title Here",
+      "viewMode": "layout",
+      "width": 200
+    }
+  },
   "schemaVersion": 2,
   "signals": {},
   "subassemblyInstances": {},

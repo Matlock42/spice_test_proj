@@ -1,0 +1,9 @@
+design:
+  plan-path: src/test.plan.json
+
+exports:
+  formats:
+    - all-pages-pdf
+    - bom-xlsx
+    - bom-csv
+  output-dir: rendered

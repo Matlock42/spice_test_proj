@@ -45,7 +45,9 @@
         "cond_1776087775896_7x47ugc8g",
         "cond_1776087779576_lz7fogrii"
       ],
-      "id": "cs_1776088061689_6f41sxg6r"
+      "id": "cs_1776088061689_6f41sxg6r",
+      "splicePartId": "solder",
+      "splicePartName": "Solder Splice"
     },
     "cs_1776088099784_9jpmip2ba": {
       "branchPointId": "bp_1776087750048_w43hwlm4w",
@@ -54,7 +56,9 @@
         "cond_1776087776207_5enza6wbr",
         "cond_1776087779824_frnxebdpi"
       ],
-      "id": "cs_1776088099784_9jpmip2ba"
+      "id": "cs_1776088099784_9jpmip2ba",
+      "splicePartId": "solder",
+      "splicePartName": "Solder Splice"
     },
     "cs_1776088105704_zigozrclf": {
       "branchPointId": "bp_1776087750048_w43hwlm4w",
@@ -63,7 +67,9 @@
         "cond_1776087776640_10u7fdbgb",
         "cond_1776087780072_9mi7y54nf"
       ],
-      "id": "cs_1776088105704_zigozrclf"
+      "id": "cs_1776088105704_zigozrclf",
+      "splicePartId": "solder",
+      "splicePartName": "Solder Splice"
     },
     "cs_1776088109793_h0ntwqco7": {
       "branchPointId": "bp_1776087750048_w43hwlm4w",
@@ -72,7 +78,9 @@
         "cond_1776087777217_hw1m0zx5q",
         "cond_1776087780360_8rqlp22no"
       ],
-      "id": "cs_1776088109793_h0ntwqco7"
+      "id": "cs_1776088109793_h0ntwqco7",
+      "splicePartId": "solder",
+      "splicePartName": "Solder Splice"
     }
   },
   "conductors": {

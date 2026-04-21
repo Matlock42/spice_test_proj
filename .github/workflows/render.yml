@@ -1,0 +1,59 @@
+name: Render plan
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'src/splice.yml'
+      - '.github/workflows/render.yml'
+  workflow_dispatch:
+
+# Collapse rapid successive commits (e.g. splice pushes design + config +
+# workflow as 3 separate commits) to a single completed run per branch.
+concurrency:
+  group: render-plan-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render
+        uses: splice-cad/plan-export-action@v0
+        with:
+          config: src/splice.yml
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered
+          path: rendered/
+          if-no-files-found: error
+
+      - name: Commit rendered outputs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Stage and commit first so the worktree is clean before any rebase.
+          git add rendered/
+          if git diff --staged --quiet; then
+            echo "No changes to rendered/"
+            exit 0
+          fi
+          git commit -m "chore: update rendered outputs [skip ci]"
+          # Retry loop handles concurrent runs racing on the same branch.
+          for i in 1 2 3; do
+            git fetch origin "${{ github.ref_name }}"
+            git rebase "origin/${{ github.ref_name }}" || { git rebase --abort; exit 1; }
+            if git push origin "HEAD:${{ github.ref_name }}"; then
+              exit 0
+            fi
+            echo "Push rejected, retrying ($i/3)..."
+          done
+          echo "Push failed after 3 attempts" >&2
+          exit 1

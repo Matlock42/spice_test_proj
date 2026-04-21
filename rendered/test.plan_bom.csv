@@ -1,7 +1,7 @@
 Designator(s),Type,MPN,Manufacturer,Description,Quantity,Unit,AWG,Color,Positions,Length (in),Terminals,Signal
 X1; X2; X3,connector,XHP-4,JST Sales America Inc.,"CONN RCPT HSG 4POS 2.50MM",3,ea,,,4,,,
 X1.1_X2.1; X1.1_X2.1; X1.1_X2.1; X1.2_X2.2; X1.2_X2.2; X1.2_X2.2; X1.3_X2.3; X1.3_X2.3; X1.3_X2.3; X1.4_X2.4; X1.4_X2.4; X1.4_X2.4,wire,Unassigned,,"",12,ea,,,,,,"X1.1_X2.1; X1.2_X2.2; X1.3_X2.3; X1.4_X2.4"
-SP?; SP?; SP?; SP?,splice,Unassigned,,"splice splice",4,ea,,,,,,
+SP?; SP?; SP?; SP?,splice,Solder Splice,,"splice splice",4,ea,,,,,,
 
 
 Summary
